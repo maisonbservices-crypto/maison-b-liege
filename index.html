@@ -1,742 +1,544 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maison B – Vide maison à Liège</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Maison B – Vide maison &amp; nettoyage à Liège et alentours</title>
 <style>
-  :root{
-    --blue:#154d9c;
-    --blue-dark:#103a74;
-    --blue-mid:#1f5db6;
-    --blue-soft:#eef5ff;
-    --light:#f7faff;
-    --text:#1d2733;
-    --muted:#5f6b7a;
-    --white:#ffffff;
-    --border:#dce6f2;
-    --gold:#d4a017;
-    --shadow:0 18px 40px rgba(16,58,116,.10);
-    --shadow-soft:0 10px 24px rgba(16,58,116,.07);
-    --radius:22px;
-    --radius-sm:16px;
-    --max:1200px;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    color:var(--text);
-    background:linear-gradient(180deg,#fbfdff 0%,#f6faff 100%);
-    line-height:1.6;
-  }
-  a{text-decoration:none;color:inherit}
-  .container{max-width:var(--max);margin:0 auto;padding:0 24px}
-  .topbar{
-    background:#0d2e5d;
-    color:#fff;
-    font-size:14px;
-    border-bottom:1px solid rgba(255,255,255,.08);
-  }
-  .topbar .container{
-    display:flex;
-    justify-content:space-between;
-    gap:16px;
-    padding:11px 24px;
-    flex-wrap:wrap;
-  }
+:root {
+ --blue:#123f7e;
+ --blue2:#1d63c9;
+ --blue3:#0f3972;
+ --dark:#0b1f3b;
+ --light:#f4f8ff;
+ --white:#ffffff;
+ --text:#1f2b38;
+ --muted:#5c6978;
+ --border:#dbe6f4;
+ --shadow:0 18px 42px rgba(16,58,116,.11);
+ --radius:24px;
+ --max:1220px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;
+ font-family:Arial, Helvetica, sans-serif;
+ color:var(--text);
+ background:linear-gradient(180deg,#fbfdff 0%,#f2f7ff 100%);
+ line-height:1.55;
+}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+.container{max-width:var(--max);margin:auto;padding:0 22px}
+.topbar{
+ background:#0a254d;color:#fff;font-size:14px;border-bottom:1px solid rgba(255,255,255,.12)
+}
+.topbar .container{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:10px 22px}
+.hero{
+ position:relative;color:#fff;overflow:hidden;
+ background:
+   linear-gradient(rgba(11,31,59,.72), rgba(18,63,126,.78)),
+   url('images/836EBAE0-C4A1-40B8-8368-9B8B62971846.jpeg') center/cover no-repeat;
+}
+.hero::after{
+ content:"";position:absolute;inset:0;
+ background:radial-gradient(circle at 85% 15%, rgba(255,255,255,.18), transparent 24%);
+}
+.hero-inner{
+ position:relative;z-index:1;
+ padding:84px 0 74px;
+ display:grid;grid-template-columns:1.12fr .88fr;gap:28px;align-items:center;
+}
+.badge{
+ display:inline-block;padding:10px 14px;border-radius:999px;
+ background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.24);
+ font-size:13px;margin-bottom:18px
+}
+h1,h2,h3{margin:0 0 14px;line-height:1.12}
+h1{font-size:66px;letter-spacing:-1.5px}
+h2{font-size:36px;color:var(--blue3)}
+h3{font-size:23px;color:var(--blue3)}
+.kicker{font-size:26px;font-weight:700;margin-bottom:10px}
+.aaz{
+ display:inline-block;
+ font-size:34px;font-weight:800;letter-spacing:.3px;
+ background:#fff;color:var(--blue3);border-radius:18px;padding:16px 22px;
+ box-shadow:0 14px 28px rgba(0,0,0,.18);margin:14px 0 16px;
+}
+.lead{font-size:19px;max-width:760px;margin:0 0 10px;color:rgba(255,255,255,.97)}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
+.btn{
+ display:inline-flex;align-items:center;justify-content:center;padding:16px 24px;border-radius:14px;
+ font-weight:700;border:2px solid transparent;transition:.18s ease;cursor:pointer;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:#fff;color:var(--blue3);box-shadow:0 10px 22px rgba(0,0,0,.16)}
+.btn-secondary{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.58);color:#fff}
+.hero-card{
+ background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:28px;
+ padding:28px;backdrop-filter:blur(5px);box-shadow:var(--shadow);
+}
+.hero-card h3{color:#fff}
+.hero-list{list-style:none;padding:0;margin:0}
+.hero-list li{padding:10px 0 10px 28px;position:relative;border-bottom:1px solid rgba(255,255,255,.13)}
+.hero-list li:last-child{border-bottom:none}
+.hero-list li:before{content:"✓";position:absolute;left:0;top:10px;font-weight:700}
+section{padding:72px 0}
+.section-light{background:linear-gradient(180deg,#f8fbff 0%, #eef5ff 100%);border-top:1px solid #ebf1fb;border-bottom:1px solid #ebf1fb}
+.section-head{max-width:860px;margin-bottom:28px}
+.section-sub{color:var(--muted);margin-top:-4px;font-size:17px}
+.grid-4,.grid-3,.grid-2,.gallery,.steps,.contact-wrap{display:grid;gap:22px}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.gallery{grid-template-columns:repeat(4,1fr)}
+.steps{grid-template-columns:repeat(4,1fr)}
+.contact-wrap{grid-template-columns:1.02fr .98fr}
+.card,.step,.contact-panel,.gallery-item,.promise,.cta-band{
+ background:#fff;border:1px solid var(--border);border-radius:var(--radius);
+ padding:24px;box-shadow:0 10px 24px rgba(16,58,116,.07);
+}
+.mini-title{font-size:16px;font-weight:700;color:var(--blue3);margin-bottom:6px}
+.muted{color:var(--muted)}
+.strongline{font-size:19px;font-weight:700;color:var(--blue3)}
+.list-check{list-style:none;padding:0;margin:0}
+.list-check li{position:relative;padding:10px 0 10px 30px;border-bottom:1px solid var(--border)}
+.list-check li:last-child{border-bottom:none}
+.list-check li:before{content:"✓";position:absolute;left:0;top:10px;color:#154d9c;font-weight:700}
+.gallery-item{padding:12px;overflow:hidden}
+.gallery-item img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;border:1px solid #dbe6f4}
+.promise{
+ background:linear-gradient(135deg,#123f7e,#195fc3);
+ color:#fff;border:none;padding:38px;border-radius:30px;
+}
+.promise h2,.promise h3{color:#fff}
+.pills{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.pill{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);padding:10px 14px;border-radius:999px}
+.step-num{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#154d9c,#2c72d4);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:14px}
+.cta-band{
+ background:linear-gradient(135deg,#154d9c,#103a74);
+ color:#fff;border:none;border-radius:32px;padding:42px;box-shadow:var(--shadow)
+}
+.cta-band h2,.cta-band .strongline{color:#fff}
+.footer{background:#101722;color:#fff;padding:28px 0;font-size:14px;margin-top:10px}
+@media (max-width:1080px){
+ .gallery{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:980px){
+ .hero-inner,.grid-4,.grid-3,.grid-2,.gallery,.steps,.contact-wrap{grid-template-columns:1fr}
+ h1{font-size:42px}
+ h2{font-size:29px}
+ .aaz{font-size:26px}
+ .hero-inner{padding:58px 0 50px}
+}
 
-  .hero{
-    position:relative;
-    overflow:hidden;
-    background:
-      radial-gradient(circle at top right, rgba(255,255,255,.18), transparent 30%),
-      radial-gradient(circle at left 20%, rgba(255,255,255,.10), transparent 24%),
-      linear-gradient(135deg,#103a74 0%, #154d9c 58%, #2c72d4 100%);
-    color:#fff;
-    padding:76px 0 58px;
-  }
-  .hero:after{
-    content:"";
-    position:absolute;
-    inset:auto -120px -120px auto;
-    width:360px;height:360px;border-radius:50%;
-    background:rgba(255,255,255,.06);
-    filter:blur(10px);
-  }
-  .hero-grid{
-    display:grid;
-    grid-template-columns:1.2fr .8fr;
-    gap:28px;
-    align-items:start;
-    position:relative;
-    z-index:1;
-  }
-  .eyebrow{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    background:rgba(255,255,255,.14);
-    color:#fff;
-    border:1px solid rgba(255,255,255,.22);
-    padding:9px 14px;
-    border-radius:999px;
-    font-size:13px;
-    margin-bottom:18px;
-    backdrop-filter:blur(4px);
-  }
-  h1,h2,h3{line-height:1.16;margin:0 0 14px}
-  h1{
-    font-size:48px;
-    letter-spacing:-0.7px;
-    max-width:780px;
-  }
-  h2{
-    font-size:33px;
-    color:var(--blue-dark);
-    letter-spacing:-0.3px;
-  }
-  h3{
-    font-size:22px;
-    color:var(--blue-dark);
-  }
-  .lead{
-    font-size:19px;
-    max-width:760px;
-    margin:0 0 12px;
-  }
-  .hero strong{color:#fff}
-  .cta-row{
-    display:flex;
-    gap:14px;
-    flex-wrap:wrap;
-    margin-top:26px;
-  }
-  .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:15px 24px;
-    border-radius:14px;
-    font-weight:bold;
-    border:2px solid transparent;
-    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
-  }
-  .btn:hover{transform:translateY(-1px)}
-  .btn-primary{
-    background:#fff;
-    color:var(--blue-dark);
-    box-shadow:0 10px 22px rgba(0,0,0,.15);
-  }
-  .btn-secondary{
-    color:#fff;
-    border-color:rgba(255,255,255,.55);
-    background:rgba(255,255,255,.08);
-  }
-
-  .hero-card{
-    background:rgba(255,255,255,.12);
-    border:1px solid rgba(255,255,255,.18);
-    border-radius:26px;
-    padding:26px;
-    box-shadow:var(--shadow);
-    backdrop-filter:blur(5px);
-  }
-  .hero-card h3{color:#fff;margin-bottom:12px}
-  .hero-list{list-style:none;padding:0;margin:0}
-  .hero-list li{
-    padding:11px 0 11px 30px;
-    position:relative;
-    border-bottom:1px solid rgba(255,255,255,.12);
-  }
-  .hero-list li:last-child{border-bottom:none}
-  .hero-list li:before{
-    content:"✓";
-    position:absolute;
-    left:0; top:11px;
-    font-weight:bold;
-    color:#fff;
-  }
-
-  .badges{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:14px;
-    margin-top:30px;
-    position:relative;
-    z-index:2;
-  }
-  .badge{
-    background:#fff;
-    color:var(--text);
-    border:1px solid #e5eefb;
-    border-radius:18px;
-    padding:18px 16px;
-    box-shadow:var(--shadow);
-    min-height:116px;
-  }
-  .badge-title{
-    font-weight:700;
-    color:var(--blue-dark);
-    margin-bottom:7px;
-    font-size:16px;
-  }
-  .badge-text{
-    color:var(--muted);
-    font-size:14px;
-    line-height:1.45;
-  }
-
-  section{
-    padding:68px 0;
-    position:relative;
-  }
-  .section-light{
-    background:linear-gradient(180deg,#f8fbff 0%, #eef5ff 100%);
-    border-top:1px solid #edf3fb;
-    border-bottom:1px solid #edf3fb;
-  }
-  .section-title{
-    max-width:760px;
-    margin-bottom:24px;
-  }
-  .section-sub{
-    color:var(--muted);
-    margin-top:-4px;
-    font-size:16px;
-  }
-
-  .cards-4,.cards-3,.cards-2,.steps{
-    display:grid;
-    gap:22px;
-  }
-  .cards-4{grid-template-columns:repeat(4,1fr)}
-  .cards-3{grid-template-columns:repeat(3,1fr)}
-  .cards-2{grid-template-columns:repeat(2,1fr)}
-  .steps{grid-template-columns:repeat(4,1fr)}
-
-  .card{
-    background:#fff;
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    padding:24px;
-    box-shadow:var(--shadow-soft);
-  }
-  .card:hover{box-shadow:var(--shadow)}
-  .review-stars{
-    color:var(--gold);
-    font-size:22px;
-    letter-spacing:1px;
-    margin-bottom:10px;
-  }
-  .review-name{
-    font-weight:700;
-    color:var(--blue-dark);
-    margin-bottom:8px;
-  }
-
-  .gallery-card{
-    padding:16px;
-    overflow:hidden;
-  }
-  .gallery-ph{
-    width:100%;
-    aspect-ratio:1/1;
-    border-radius:18px;
-    background:
-      linear-gradient(135deg, rgba(21,77,156,.10), rgba(21,77,156,.03)),
-      linear-gradient(135deg,#eff4fb,#dfe9f8);
-    border:1px dashed #9fb2d0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:var(--blue-dark);
-    font-weight:700;
-    padding:24px;
-    font-size:19px;
-  }
-  .gallery-label{
-    margin-top:12px;
-    color:var(--muted);
-    font-size:14px;
-  }
-
-  .list-check{
-    list-style:none;
-    padding:0;
-    margin:0;
-  }
-  .list-check li{
-    padding:10px 0 10px 30px;
-    position:relative;
-    border-bottom:1px solid var(--border);
-  }
-  .list-check li:last-child{border-bottom:none}
-  .list-check li:before{
-    content:"✓";
-    position:absolute;
-    left:0; top:10px;
-    color:var(--blue);
-    font-weight:bold;
-  }
-
-  .step{
-    background:#fff;
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    padding:24px;
-    box-shadow:var(--shadow-soft);
-  }
-  .step-num{
-    width:42px;height:42px;border-radius:50%;
-    background:linear-gradient(135deg,var(--blue),var(--blue-mid));
-    color:#fff;
-    display:flex;align-items:center;justify-content:center;
-    font-weight:bold;
-    margin-bottom:14px;
-    box-shadow:0 8px 18px rgba(21,77,156,.22);
-  }
-
-  .banner{
-    background:
-      radial-gradient(circle at top right, rgba(255,255,255,.12), transparent 28%),
-      linear-gradient(135deg,#154d9c,#103a74);
-    color:#fff;
-    border-radius:28px;
-    padding:36px;
-    box-shadow:var(--shadow);
-  }
-  .banner h2{color:#fff}
-
-  .contact-box{
-    display:grid;
-    grid-template-columns:1.08fr .92fr;
-    gap:22px;
-    align-items:start;
-  }
-  .contact-panel{
-    background:#fff;
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    padding:28px;
-    box-shadow:var(--shadow-soft);
-  }
-  .footer{
-    background:#0f1723;
-    color:#fff;
-    padding:28px 0;
-    font-size:14px;
-    margin-top:14px;
-  }
-  .muted{color:var(--muted)}
-
-  @media (max-width:1100px){
-    .cards-4{grid-template-columns:repeat(2,1fr)}
-    .badges{grid-template-columns:repeat(3,1fr)}
-  }
-  @media (max-width:900px){
-    .hero-grid,.cards-4,.cards-3,.cards-2,.steps,.contact-box,.badges{
-      grid-template-columns:1fr;
-    }
-    h1{font-size:37px}
-    h2{font-size:28px}
-    .hero{padding:60px 0 48px}
-  }
-
-  .pricing-wrap{
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:22px;
-  }
-  .pricing-panel{
-    background:#fff;
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    padding:26px;
-    box-shadow:var(--shadow-soft);
-  }
-  .pricing-panel h3{
-    margin-top:0;
-    display:flex;
-    align-items:center;
-    gap:10px;
-  }
-  .pricing-note{
-    background:var(--blue-soft);
-    border:1px solid #d9e7fb;
-    border-radius:16px;
-    padding:16px 18px;
-    margin:16px 0;
-    color:var(--blue-dark);
-    font-weight:700;
-  }
-  .conf-box{
-    margin-top:18px;
-    background:linear-gradient(180deg,#fbfdff,#f3f8ff);
-    border:1px solid #dce6f2;
-    border-radius:18px;
-    padding:20px;
-  }
-  .mini-title{
-    font-size:15px;
-    text-transform:uppercase;
-    letter-spacing:.5px;
-    color:var(--blue-dark);
-    font-weight:700;
-    margin-bottom:8px;
-  }
-  @media (max-width:980px){
-    .pricing-wrap{grid-template-columns:1fr}
-  }
+.review-stars{
+ color:#f4b400;
+ font-size:22px;
+ letter-spacing:2px;
+ line-height:1;
+ margin-bottom:10px;
+}
+.review-card h3{margin-bottom:6px}
+.review-source{
+ font-size:13px;
+ color:var(--muted);
+ margin-bottom:10px;
+}
+.final-highlight{
+ font-size:20px;
+ font-weight:800;
+ color:var(--blue3);
+}
+.faq-item{
+ background:#fff;
+ border:1px solid var(--border);
+ border-radius:18px;
+ padding:20px;
+ box-shadow:0 8px 18px rgba(16,58,116,.06);
+}
+.faq-item h3{
+ font-size:18px;
+ margin-bottom:8px;
+}
 
 </style>
 </head>
 <body>
-
 <div class="topbar">
-  <div class="container">
-    <div>Maison B – Vide maison & nettoyage</div>
-    <div>📞 +32 491 50 81 33 • 📧 maisonb.services@gmail.com</div>
-  </div>
+<div class="container">
+<div>Maison B – Vide maison &amp; nettoyage</div>
+<div>📞 +32 491 50 81 33 • 📧 maisonb.services@gmail.com</div>
+</div>
+</div>
+<header class="hero">
+<div class="container">
+<div class="hero-inner">
+<div>
+<span class="badge">Liège &amp; province • intervention rapide • devis gratuit</span>
+<h1>Maison B</h1>
+<div class="kicker">Vide maison &amp; nettoyage à Liège et alentours</div>
+<div class="aaz">ON S’OCCUPE DE TOUT, DE A à Z</div>
+<p class="lead" style="font-weight:800">Besoin de vider une maison rapidement à Liège et alentours ? Appelez-nous maintenant. Intervention possible sous 24 à 72h selon la situation à Liège et alentours et dans toute la région.</p>
+<p class="lead" style="font-weight:700">Vous ne devez rien gérer. On s’occupe de tout.
+</p>
+<p class="strongline" style="margin-top:10px">
+</p>
+<p class="lead">Tri, évacuation, nettoyage complet, gestion des objets, des meubles et des papiers personnels : Maison B prend en charge l’intervention complète avec sérieux, discrétion et efficacité.</p>
+<p class="lead">Nous intervenons aussi dans les logements très encombrés, les situations difficiles et les gros chantiers qui demandent une vraie remise en état.</p>
+<div class="cta-row">
+<a class="btn btn-primary" href="tel:+32491508133" style="background:#f4b400;color:#000;border:none;">📞 Appeler maintenant maintenant</a>
+<a class="btn btn-primary" href="mailto:maisonb.services@gmail.com" style="background:#f4b400;color:#000;border:none;">📩 Demander un devis</a>
+</div>
+</div>
+<div class="hero-card">
+<h3>Pourquoi les clients nous choisissent</h3>
+<ul class="hero-list">
+<li>Prise en charge complète du début à la fin</li>
+<li>Intervention rapide selon la situation</li>
+<li>Travail sérieux, discret et respectueux</li>
+<li>Tri, dons et revalorisation lorsque possible</li>
+<li>Gestion attentive des papiers et documents importants</li>
+<li>Résultat propre, clair et sans mauvaise surprise</li>
+</ul>
+</div>
+</div>
+</div>
+</header>
+<p style="text-align:center;font-size:22px;font-weight:900;color:#ffcc00;">
+👉 On s’occupe des situations que les autres refusent
+</p>
+
+
+<p class="strongline" style="text-align:center;margin-top:20px;">
+👉 Des centaines de maisons vidées à Liège et alentours – une expérience solide depuis de nombreuses années
+</p>
+
+
+<section style="background:#fff;padding:60px 20px;">
+<div class="container">
+
+<h2 style="font-size:34px;color:#0f3972;">
+Vous pensez que la situation est trop compliquée ?
+</h2>
+
+<p style="font-size:18px;color:#5c6978;">
+Maison très encombrée  
+
+Logement laissé dans un état difficile  
+
+Situation bloquée ou urgente…
+</p>
+
+<p style="font-size:22px;font-weight:800;color:#123f7e;margin-top:15px;">
+👉 C’est exactement dans ces situations que nous intervenons le plus souvent.
+</p>
+
+<p style="color:#5c6978;">
+Beaucoup de clients nous appellent en pensant que c’est “impossible”.
+Dans la majorité des cas, la solution est plus simple qu’ils ne le pensent.
+</p>
+
+<p style="font-weight:700;color:#0f3972;">
+👉 Vous n’êtes pas seul. On s’occupe de tout.
+</p>
+
 </div>
 
-<header class="hero">
-  <div class="container">
-    <span class="eyebrow">Liège & province • intervention rapide • devis gratuit</span>
-    <div class="hero-grid">
-      <div>
-        <h1>Vide maison à Liège – intervention rapide avec tri, revalorisation et dons aux associations</h1>
-        <p class="lead"><strong>Intervention rapide à Liège et en province – devis gratuit et sans engagement.</strong></p>
-        <p class="lead"><strong>Nous vidons et nettoyons votre bien de A à Z, avec tri, revalorisation et dons aux associations.</strong></p>
-        <p class="lead">Maison B intervient rapidement pour le vide maison, vide appartement, cave, grenier et nettoyage complet.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="tel:+32491508133">📞 Appeler maintenant</a>
-          <a class="btn btn-secondary" href="mailto:maisonb.services@gmail.com">📩 Demander un devis gratuit</a>
-        </div>
-      </div>
-      <div class="hero-card">
-        <h3>Pourquoi nous choisir</h3>
-        <ul class="hero-list">
-          <li>Intervention rapide (24h à 48h selon situation)</li>
-          <li>Travail sérieux, discret et complet</li>
-          <li>Collaboration avec notaires, avocats, administrateurs de biens, agences immobilières et particuliers</li>
-          <li>Tri, réemploi et dons aux associations</li>
-          <li><strong>Possibilité de vide maison gratuit selon les biens récupérables</strong></li>
-          <li><strong>Nous nous occupons de tout, de A à Z</strong></li>
-        </ul>
-      </div>
-    </div>
+<p style="font-size:20px;font-weight:800;color:#123f7e;text-align:center;">
+👉 Vous êtes bloqué ? Appelez-nous maintenant, on vous explique la solution en quelques minutes.
+</p>
 
-    <div class="badges">
-      <div class="badge">
-        <div class="badge-title">Depuis 1975</div>
-        <div class="badge-text">Savoir-faire et réputation construits dans la durée.</div>
-      </div>
-      <div class="badge">
-        <div class="badge-title">Avis 5⭐</div>
-        <div class="badge-text">Des retours clients rassurants et crédibles.</div>
-      </div>
-      <div class="badge">
-        <div class="badge-title">Intervention rapide</div>
-        <div class="badge-text">Disponible rapidement selon la situation.</div>
-      </div>
-      <div class="badge">
-        <div class="badge-title">Tri & dons</div>
-        <div class="badge-text">Réemploi, revalorisation et associations locales.</div>
-      </div>
-      <div class="badge">
-        <div class="badge-title">Gratuit possible</div>
-        <div class="badge-text">Selon la valeur des biens récupérables.</div>
-      </div>
-    </div>
-  </div>
-</header>
 
-<section class="section-light">
-  <div class="container">
-    <div class="section-title">
-      <h2>Ils nous ont fait confiance</h2>
-      <p class="section-sub">Des avis courts, clairs et rassurants pour montrer le sérieux du service.</p>
-    </div>
-    <div class="cards-4">
-      <div class="card">
-        <div class="review-stars">★★★★★</div>
-        <div class="review-name">Nathalie F. – Avis Google</div>
-        <div>Efficacité, rapidité, gentillesse, une équipe très sympathique et dynamique au top. Excellent travail.</div>
-      </div>
-      <div class="card">
-        <div class="review-stars">★★★★★</div>
-        <div class="review-name">Benoît G. – Avis Google</div>
-        <div>Contacté suite au départ d’une locataire ayant abandonné de nombreux déchets. Service efficace à un prix raisonnable, personnel ponctuel et poli.</div>
-      </div>
-      <div class="card">
-        <div class="review-stars">★★★★★</div>
-        <div class="review-name">Muriel F. – Avis Google</div>
-        <div>Magnifique travail. Vite et bien. Devis rapide et respecté. Personnes très sympathiques.</div>
-      </div>
-      <div class="card">
-        <div class="review-stars">★★★★★</div>
-        <div class="review-name">Oliver S. – Avis Google</div>
-        <div>Nous avons fait appel à Maison B pour vider et nettoyer une maison. Travail réalisé avec beaucoup de sérieux, proprement et rapidement.</div>
-      </div>
-    </div>
-  </div>
-</section>
+<p style="text-align:center;color:#ff0000;font-weight:900;">
+⚠️ Intervention rapide possible – ne laissez pas le problème traîner
+</p>
 
-<section>
-  <div class="container">
-    <div class="banner">
-      <h2>Voir nos réalisations</h2>
-      <p>Retrouvez directement nos AVANT / APRÈS et nos chantiers récents sur notre page Facebook Maison B.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" style="background:#fff; color:var(--blue-dark);" href="https://www.facebook.com/maisonb.liege" target="_blank">Voir nos réalisations sur Facebook</a>
-      </div>
-    </div>
-  </div>
 </section>
 
 <section class="section-light">
-  <div class="container">
-    <div class="section-title">
-      <h2>Nos services</h2>
-      <p class="section-sub">Maison B est spécialisée dans des interventions complètes, rapides et responsables.</p>
-    </div>
-    <div class="cards-2">
-      <div class="card">
-        <ul class="list-check">
-          <li>Vide maison Liège</li>
-          <li>Vide appartement Liège</li>
-          <li>Vide garage</li>
-          <li>Vide cave et grenier</li>
-          <li>Évacuation des encombrants</li>
-          <li>Nettoyage complet</li>
-        </ul>
-      </div>
-      <div class="card">
-        <ul class="list-check">
-          <li>Intervention après locataire</li>
-          <li>Intervention après succession ou décès</li>
-          <li>Remise en état avant vente ou location</li>
-          <li>Logements très encombrés ou situations complexes</li>
-          <li>Possibilité de vide maison gratuit selon les biens récupérables</li>
-          <li>Prise en charge de A à Z</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="section-head">
+<h2>Vous êtes dans cette situation ?</h2>
+<p class="section-sub">Maison B intervient dans les situations simples comme dans les dossiers plus lourds, urgents ou délicats.</p>
+</div>
+<div class="grid-2">
+<div class="card">
+<ul class="list-check">
+<li>Succession difficile ou maison de famille à vider</li>
+<li>Maison très encombrée ou logement type Diogène</li>
+<li>Logement laissé en désordre après un départ</li>
+<li>Appartement ou maison à vider rapidement avant vente</li>
+</ul>
+</div>
+<div class="card">
+<ul class="list-check">
+<li>Vente immobilière urgente</li>
+<li>Cave, grenier ou garage plein</li>
+<li>Situation compliquée, sensible ou très chargée</li>
+<li>Besoin d’un nettoyage complet après intervention</li>
+</ul>
+</div>
+</div>
+<p class="final-highlight" style="margin-top:22px">👉 Dans tous les cas, vous ne devez rien gérer : on s’occupe de tout, de A à Z.</p>
+<div class="cta-row">
+<a class="btn btn-primary" href="tel:+32491508133" style="background:#f4b400;color:#000;border:none;">📞 Appeler maintenant maintenant</a>
+<a class="btn btn-primary" href="mailto:maisonb.services@gmail.com" style="background:#f4b400;color:#000;border:none;">📩 Demander un devis</a>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<h2>Derrière chaque maison, il y a une histoire</h2>
+<p class="muted">Certaines situations sont simples. D’autres sont beaucoup plus lourdes à gérer : succession, logement très encombré, départ difficile, vente urgente ou habitation laissée en état critique.</p>
+<p class="muted">Notre rôle est de vous enlever ce poids avec respect, discrétion et sans jugement. Nous trions, évacuons, nettoyons et remettons les lieux en ordre de manière sérieuse et humaine.</p>
+<p class="strongline">👉 Un simple appel suffit pour débloquer la situation.</p>
+<p class="strongline" style="margin-top:10px">
+💡 Dans certains cas, le vide maison peut être entièrement gratuit,
+voire même vous rapporter quelque chose selon le contenu du logement.
+</p>
+</div>
+</section>
+<section class="section-light">
+<div class="container">
+<div class="section-head">
+<h2>Vide maison + nettoyage complet</h2>
+<p class="section-sub">Nous ne faisons pas uniquement du vide maison : nous assurons également le nettoyage complet après intervention.</p>
+</div>
+<div class="grid-3">
+<div class="card">
+<h3>Tri &amp; évacuation</h3>
+<p class="muted">Meubles, objets, effets personnels, caves, greniers et pièces de vie sont triés et évacués proprement.</p>
+</div>
+<div class="card">
+<h3>Nettoyage complet</h3>
+<p class="muted">Sols, surfaces et espaces de vie sont remis au propre après le vidage, selon l’état du logement.</p>
+</div>
+<div class="card">
+<h3>Bien prêt pour la suite</h3>
+<p class="muted">Le logement est laissé vide, propre et prêt pour une vente, une location ou une reprise par la famille.</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<div class="section-head">
+<h2>Avant / Après</h2>
+<p class="section-sub">Quelques exemples concrets de nos interventions. Le reste de nos réalisations est disponible sur Facebook.</p>
+</div>
+
+<div style="text-align:center;padding:40px 0;">
+
+ <p style="font-size:20px;font-weight:700;color:#0f3972;">
+   🚧 Section en cours de mise à jour
+ </p>
+
+ <p style="margin-top:10px;font-size:16px;">
+   📸 Photos actuellement en cours d’intégration
+ </p>
+
+ <p style="margin-top:10px;max-width:620px;margin-left:auto;margin-right:auto;color:#5c6978;">
+   Nous faisons le nécessaire pour mettre en ligne nos réalisations dans les meilleures conditions.
+ </p>
+
+ <p style="margin-top:10px;font-weight:600;">
+   👉 En attendant, vous pouvez découvrir toutes nos interventions sur notre page Facebook.
+<p class="strongline">👉 Plus de 180 photos réelles de chantiers disponibles sur notre Facebook</p>
+
+ </p>
+
+ <a href="https://www.facebook.com/maisonbliege"
+    target="_blank"
+    rel="noopener"
+    style="display:inline-block;margin-top:20px;padding:16px 30px;
+    background:#f4b400;color:#000;font-weight:700;
+    border-radius:12px;font-size:18px;">
+    Voir plus de 180 chantiers réels
+ </a>
+
+</div>
+
+</div>
+</section>
+<section class="section-light">
+<div class="container">
+<div class="section-head">
+<h2>Comment ça se passe ?</h2>
+<p class="section-sub">Simple pour vous, complet de notre côté.</p>
+</div>
+<div class="steps">
+<div class="step">
+<div class="step-num">1</div>
+<h3>Premier contact</h3>
+<p class="muted">Vous expliquez la situation, l’urgence éventuelle et le type de bien concerné.</p>
+</div>
+<div class="step">
+<div class="step-num">2</div>
+<h3>Évaluation</h3>
+<p class="muted">Nous analysons le volume, l’accès, l’état du logement et les éléments valorisables.</p>
+</div>
+<div class="step">
+<div class="step-num">3</div>
+<h3>Intervention complète</h3>
+<p class="muted">Nous prenons en charge le chantier de A à Z, avec tri, évacuation et nettoyage si nécessaire.</p>
+</div>
+<div class="step">
+<div class="step-num">4</div>
+<h3>Bien remis en état</h3>
+<p class="muted">Le logement est vidé, propre et prêt à être repris, vendu, loué ou remis en ordre.</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<div class="section-head">
+<h2>Questions fréquentes</h2>
+<p class="section-sub">Les réponses aux questions que l’on nous pose le plus souvent.</p>
+</div>
+<div class="grid-2">
+<div class="faq-item">
+<h3>Le devis est-il gratuit ?</h3>
+<p class="muted">Oui, le devis est gratuit et sans engagement.</p>
+</div>
+<div class="faq-item">
+<h3>Intervenez-vous rapidement ?</h3>
+<p class="muted">Oui, une intervention est possible sous 24 à 72h selon la situation, l’accès et le volume à traiter.</p>
+</div>
+<div class="faq-item">
+<h3>Le nettoyage est-il compris ?</h3>
+<p class="muted">Oui, nous pouvons assurer le nettoyage complet après le vidage afin de laisser le logement vide et propre.</p>
+</div>
+<div class="faq-item">
+<h3>Le vide maison peut-il être gratuit ?</h3>
+<p class="muted">Oui, dans certains cas, selon la valeur des biens récupérables, le coût peut être fortement réduit, voire nul.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section-light" id="avis-google">
+<div class="container">
+<div class="section-head">
+<h2>Avis Google</h2>
+<p class="strongline">⭐ +13 avis clients – 100% 5 étoiles</p>
+<p class="strongline">📸 +180 photos de chantiers réels disponibles</p>
+
+<p class="section-sub">Des retours réels de clients accompagnés par Maison B – Vide maison &amp; nettoyage.</p>
+</div>
+<div class="grid-4">
+<div class="card review-card">
+<div class="review-stars">★★★★★</div>
+<h3>Delphine Struelens</h3>
+<div class="review-source">Avis Google 5 étoiles</div>
+<p class="muted">J’avais un appartement à vider depuis un moment et je repoussais toujours parce que je ne savais pas par où commencer. Ils ont tout géré : le tri, l’évacuation et un nettoyage en profondeur. Quand je suis revenue, l’appartement était vidé et propre, prêt pour la suite.</p>
+</div>
+<div class="card review-card">
+<div class="review-stars">★★★★★</div>
+<h3>Amulya Propson</h3>
+<div class="review-source">Avis Google 5 étoiles</div>
+<p class="muted">J’ai fait appel à Maison B pour vider la maison de ma maman avant la mise en vente. Ils ont tout géré : tri, évacuation des meubles, remise en état de la maison… Ce que j’ai apprécié, c’est le côté humain.</p>
+</div>
+<div class="card review-card">
+<div class="review-stars">★★★★★</div>
+<h3>Oliver Smit’s</h3>
+<div class="review-source">Avis Google 5 étoiles</div>
+<p class="muted">Nous avons fait appel à Maison B pour vider et nettoyer une maison à Dalhem. Le travail a été réalisé avec beaucoup de sérieux : tout a été fait proprement et rapidement. Une équipe très professionnelle et respectueuse.</p>
+</div>
+<div class="card review-card">
+<div class="review-stars">★★★★★</div>
+<h3>Jean-Luc Bastin</h3>
+<div class="review-source">Avis Google 5 étoiles</div>
+<p class="muted">Nous avons fait appel à la Maison B pour la vidange de la maison de nos parents. Un travail professionnel et très soigné. Bien à l’écoute de nos besoins. Je recommande cette maison sans la moindre hésitation.</p>
+</div>
+</div>
+<div class="cta-row" style="margin-top:26px">
+<a class="btn btn-primary" href="https://www.google.com/search?q=Maison+B+-+Vide+maison+%26+nettoyage+avis" rel="noopener" style="background:#123f7e;color:#fff;border:none;" target="_blank">⭐ Voir nos avis Google</a>
+<a class="btn btn-primary" href="https://www.facebook.com/maisonbliege" style="background:#f4b400;color:#000;border:none;">Voir plus de 180 chantiers réels Facebook</a>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<div class="cta-band">
+<h2>Besoin d’une intervention rapide ?<br><span style='font-size:16px;font-weight:600'>📞 Réponse rapide – Devis gratuit – Intervention efficace</span></h2>
+<p class="strongline">On s’occupe de tout, de A à Z.
+
+Nous savons que ces situations sont souvent difficiles. Notre rôle est de vous simplifier la vie au maximum.</p>
+<p>Vide maison + nettoyage complet – intervention rapide – service sérieux, humain et discret.</p>
+<p class="strongline">Un simple appel suffit pour débloquer la situation.</p>
+<div class="cta-row">
+<a class="btn btn-primary" href="tel:+32491508133" style="background:#f4b400;color:#000;border:none;">📞 Appeler maintenant maintenant</a>
+<a class="btn btn-primary" href="mailto:maisonb.services@gmail.com" style="background:#f4b400;color:#000;border:none;">📩 Demander un devis</a>
+</div>
+</div>
+</div>
+</section>
+<section class="section-light">
+<div class="container contact-wrap">
+<div class="contact-panel">
+<h2>Zone d’intervention</h2>
+<p class="muted">Liège et alentours, Herstal, Ans, Seraing, Saint-Nicolas, Fléron, Chaudfontaine, Beyne-Heusay, Soumagne, Visé…</p>
+<p class="muted">Intervention possible plus largement selon la demande et le type de chantier.</p>
+</div>
+<div class="contact-panel">
+<h2>Maison B</h2>
+<p class="muted">Vide maison, tri, réemploi, dons aux associations, nettoyage complet et prise en charge sérieuse des situations complexes à Liège et alentours et dans sa région.</p>
+</div>
+</div>
 </section>
 
-<section>
-  <div class="container">
-    <div class="section-title">
-      <h2>Une approche responsable</h2>
-      <p class="section-sub">Le tri, le don et le réemploi font partie de l’identité de Maison B.</p>
-    </div>
-    <div class="cards-3">
-      <div class="card">
-        <h3>Tri des objets</h3>
-        <p>Contrairement à un débarras classique, nous trions les objets avec sérieux avant toute évacuation.</p>
-      </div>
-      <div class="card">
-        <h3>Dons aux associations</h3>
-        <p>Nous donnons une grande partie aux associations locales, dont Fleur Service Social, pour aider des personnes dans le besoin.</p>
-      </div>
-      <div class="card">
-        <h3>Réemploi & revalorisation</h3>
-        <p><strong>Notre objectif : donner une seconde vie à un maximum d’objets plutôt que de jeter inutilement.</strong></p>
-      </div>
-    </div>
-  </div>
+
+<a href="tel:+32491508133"
+style="position:fixed;bottom:20px;right:20px;
+background:#f4b400;color:#000;
+padding:16px 20px;border-radius:50px;
+font-weight:bold;z-index:9999;">
+📞 Appeler maintenant
+</a>
+
+
+<section style="background:#fff;padding:60px 20px;">
+<div class="container">
+<h2>Devis gratuit & valorisation des biens
+<p style="text-align:center;font-size:22px;font-weight:900;color:#0f3972;">
+💡 Dans certains cas, le vide maison peut être entièrement gratuit
+</p>
+</h2>
+<p>Selon les biens présents, le vide maison peut être gratuit ou fortement réduit.</p>
+<p style="font-weight:700;">👉 Estimation gratuite sur place</p>
+<p class="strongline">💡 Dans certains cas, le contenu du logement permet de financer tout ou partie du vide maison.</p>
+</div>
 </section>
+
 
 <section class="section-light">
-  <div class="container">
-    <div class="section-title">
-      <h2>Nos clients & partenaires</h2>
-      <p class="section-sub">Une crédibilité construite avec le temps et la confiance.</p>
-    </div>
-    <div class="card">
-      <p><strong>Maison B est régulièrement sollicité par :</strong></p>
-      <p>Particuliers, notaires, avocats, administrateurs de biens, agences immobilières, institutions et structures publiques.</p>
-      <p>Certaines collaborations restent confidentielles, preuve de la confiance accordée à notre travail.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="section-title">
-      <h2>Nos interventions</h2>
-      <p class="section-sub">Maison B intervient dans toutes les situations.</p>
-    </div>
-    <div class="cards-3">
-      <div class="card">
-        <h3>Situations courantes</h3>
-        <p>Maisons, appartements, caves, greniers, garages, biens avant vente ou location.</p>
-      </div>
-      <div class="card">
-        <h3>Situations sensibles ou complexes</h3>
-        <p>Après départ de locataire, succession, décès ou logement très encombré nécessitant discrétion et efficacité.</p>
-      </div>
-      <div class="card">
-        <h3>Même niveau d’exigence</h3>
-        <p><strong>Chaque intervention est réalisée avec le même niveau d’exigence, quelle que soit la situation.</strong></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-light">
-  <div class="container">
-    <div class="section-title">
-      <h2>Comment ça se passe ?</h2>
-      <p class="section-sub">Un fonctionnement simple, clair et rassurant.</p>
-    </div>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h3>Contact rapide</h3>
-        <p>Vous nous expliquez la situation par téléphone, message ou e-mail.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h3>Devis gratuit</h3>
-        <p>Nous analysons le volume, l’accès, la nature des biens et le nettoyage à prévoir.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h3>Intervention complète</h3>
-        <p>Tri, évacuation et nettoyage sont réalisés avec sérieux et efficacité.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <h3>Bien remis en état</h3>
-        <p>Le bien est vidé, propre et prêt à être réutilisé, vendu ou reloué.</p>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<h2>Un service reconnu et encadré</h2>
+<ul class="list-check">
+<li>Interventions pour notaires</li>
+<li>Collaboration avec avocats</li>
+<li>Administrateurs de biens</li>
+<li>Dons et partenariats avec associations</li>
+</ul>
+<p class="strongline">👉 Un travail sérieux, structuré et reconnu</p>
+</div>
 </section>
 
 
+<a href="tel:+32491508133"
+style="position:fixed;bottom:20px;right:20px;
+background:#f4b400;color:#000;
+padding:16px 20px;border-radius:50px;
+font-weight:bold;z-index:9999;">
+📞 Appeler maintenant
+</a>
 
-<section>
-  <div class="container">
-    <div class="section-title">
-      <h2>Transparence & tarifs</h2>
-      <p class="section-sub">Un prix clair, adapté à chaque situation.</p>
-    </div>
-
-    <div class="pricing-wrap">
-      <div class="pricing-panel">
-        <p>Chaque intervention est adaptée selon le volume, l’accès, l’état du logement et la valorisation des biens.</p>
-        <p>Une partie des objets peut être récupérée, revalorisée ou donnée.</p>
-
-        <div class="pricing-note">Dans certains cas, le vide maison peut être fortement réduit, voire gratuit selon le contenu du logement.</div>
-
-        <p><strong>Chaque situation est différente : nous proposons toujours une solution adaptée et transparente.</strong></p>
-
-        <h3>⚠️ Pourquoi les prix peuvent varier ?</h3>
-        <p>Un vide maison réalisé correctement implique :</p>
-        <ul class="list-check">
-          <li>le tri des objets</li>
-          <li>le transport</li>
-          <li>le traitement des déchets dans des centres agréés</li>
-          <li>le respect des normes environnementales</li>
-        </ul>
-
-        <p>Ces démarches ont un coût réel et incompressible.</p>
-
-        <div class="conf-box">
-          <div class="mini-title">Ce que certaines offres très basses peuvent négliger</div>
-          <p><strong>Certaines offres très basses ne prennent pas toujours en compte l’ensemble de ces obligations.</strong></p>
-          <p>Cela peut entraîner :</p>
-          <ul class="list-check">
-            <li>un tri non effectué</li>
-            <li>une évacuation non conforme</li>
-            <li>une gestion inadaptée des déchets</li>
-            <li><strong>une mauvaise gestion des documents et déchets confidentiels</strong></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pricing-panel">
-        <h3>🔒 Confidentialité & documents personnels</h3>
-
-        <p>Nous savons que certaines situations impliquent des documents sensibles : relevés bancaires, documents administratifs, dossiers personnels…</p>
-
-        <div class="pricing-note">Beaucoup de clients nous contactent justement pour être certains que leurs documents personnels soient correctement détruits et ne se retrouvent jamais à l’extérieur.</div>
-
-        <p><strong>Certaines sociétés n’ont pas toujours pleinement conscience de l’importance de ces documents et des risques liés à leur mauvaise gestion.</strong></p>
-
-        <p><strong>C’est pourquoi nous accordons une attention particulière à leur traitement.</strong></p>
-
-        <p><strong>Ces éléments sont systématiquement triés avec attention, séparés et confiés à des filières adaptées pour une destruction sécurisée.</strong></p>
-
-        <p><strong>Ils sont ensuite pris en charge dès leur arrivée en centre spécialisé afin d’être détruits dans le respect des procédures prévues.</strong></p>
-
-        <ul class="list-check">
-          <li>tri avec attention</li>
-          <li>séparation des documents sensibles</li>
-          <li>élimination via des filières adaptées</li>
-        </ul>
-
-        <div class="conf-box">
-          <div class="mini-title">Notre engagement</div>
-          <p><strong>Rien n’est laissé au hasard.</strong></p>
-          <p><strong>Notre objectif est de garantir que ces documents ne se retrouvent jamais dans la nature ni entre de mauvaises mains.</strong></p>
-          <p>Vous pouvez nous faire confiance pour une gestion <strong>sérieuse, confidentielle et respectueuse</strong>.</p>
-        </div>
-
-        <p><strong>Chez Maison B, nous faisons le choix d’un travail sérieux, propre et respectueux des normes.</strong></p>
-        <ul class="list-check">
-          <li>tri effectué avec soin</li>
-          <li>dons aux associations</li>
-          <li>évacuation dans des filières autorisées</li>
-          <li>respect total des biens et de la confidentialité</li>
-        </ul>
-
-        <p><strong>Un travail bien fait a un prix, mais il garantit un résultat propre, légal et sans mauvaise surprise.</strong></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="section-light">
-  <div class="container">
-    <div class="banner">
-      <h2>Expérience & zone d’intervention</h2>
-      <p>Maison B s’appuie sur un savoir-faire existant depuis 1975, avec une réputation construite sur la confiance, le sérieux et la qualité du travail.</p>
-      <p>Liège, Herstal, Seraing, Ans, Saint-Nicolas, Fléron, Chaudfontaine, Beyne-Heusay, Soumagne, Visé…</p>
-      <p style="margin:0"><strong>Intervention possible dans toute la région selon la demande.</strong></p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container contact-box">
-    <div class="contact-panel">
-      <h2>Contact</h2>
-      <p>Besoin d’un vide maison à Liège ?</p>
-      <p><strong>Devis gratuit – intervention rapide – service sérieux et discret.</strong></p>
-      <div class="cta-row">
-        <a class="btn btn-primary" style="background:var(--blue); color:#fff;" href="tel:+32491508133">📞 +32 491 50 81 33</a>
-        <a class="btn" style="background:#fff; color:var(--blue-dark); border:2px solid var(--blue-dark);" href="mailto:maisonb.services@gmail.com">📧 maisonb.services@gmail.com</a>
-      </div>
-    </div>
-    <div class="contact-panel">
-      <h3>Maison B – Vide maison & nettoyage</h3>
-      <p class="muted">Vide maison, vide appartement, tri, réemploi, dons aux associations, nettoyage complet et remise en état à Liège et dans sa région.</p>
-    </div>
-  </div>
-</section>
 
 <div class="footer">
-  <div class="container">© Maison B – Vide maison & nettoyage • Liège et sa région</div>
+<div class="container">© Maison B – Vide maison &amp; nettoyage</div>
 </div>
-
 </body>
 </html>
