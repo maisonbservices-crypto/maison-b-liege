@@ -712,9 +712,9 @@ footer{background:#070E17;padding:48px 5% 26px}
     <p class="sub">Laissez-nous vos coordonnées, nous vous rappelons dans les plus brefs délais.</p>
     <div class="recall-form">
       <div class="recall-fields">
-        <input type="text" id="rc-nom" placeholder="Votre nom" class="rc-input">
-        <input type="tel" id="rc-tel" placeholder="Votre numéro de téléphone" class="rc-input">
-        <textarea id="rc-msg" placeholder="Décrivez brièvement votre situation (optionnel)" class="rc-input rc-textarea"></textarea>
+        <input type="text" id="rc-nom" placeholder="Votre nom" class="rc-input" autocomplete="name" inputmode="text">
+        <input type="tel" id="rc-tel" placeholder="Votre numéro de téléphone" class="rc-input" autocomplete="tel" inputmode="tel">
+        <textarea id="rc-msg" placeholder="Décrivez brièvement votre situation (optionnel)" class="rc-input rc-textarea" autocomplete="off" inputmode="text"></textarea>
       </div>
       <button onclick="sendRecall()" class="btn btn-gold rc-btn">Envoyer ma demande</button>
       <p class="rc-note">Ou contactez-nous directement : <a href="tel:+32491508133">0491 50 81 33</a> · <a href="https://wa.me/32491508133">WhatsApp</a></p>
