@@ -501,12 +501,12 @@ body{font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;-webkit-font-
 
 /* SECTIONS */
 /* DARK sections */
-.s-dark{background:var(--navy);padding:88px 5%}
-.s-dark2{background:var(--navy2);padding:88px 5%}
-.s-dark3{background:var(--navy3);padding:88px 5%}
+.s-dark{background:var(--navy);padding:56px 5%}
+.s-dark2{background:var(--navy2);padding:56px 5%}
+.s-dark3{background:var(--navy3);padding:56px 5%}
 /* LIGHT sections */
-.s-light{background:var(--cream);padding:88px 5%;color:var(--light-text)}
-.s-white{background:var(--white);padding:88px 5%;color:var(--light-text)}
+.s-light{background:var(--cream);padding:56px 5%;color:var(--light-text)}
+.s-white{background:var(--white);padding:56px 5%;color:var(--light-text)}
 
 .inner{max-width:1160px;margin:0 auto}
 
@@ -583,7 +583,7 @@ body{font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;-webkit-font-
 .avis-lnk a:hover{border-color:rgba(255,255,255,.3);color:var(--white)}
 
 /* DEVIS - section claire */
-.dv-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:48px}
+.dv-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
 @media(max-width:600px){.dv-grid{grid-template-columns:1fr}}
 .dv{background:var(--white);border:1px solid var(--border-light);border-radius:10px;padding:26px 22px}
 .dv-bar{width:24px;height:3px;background:var(--blue);border-radius:2px;margin-bottom:14px}
@@ -591,7 +591,7 @@ body{font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;-webkit-font-
 .dv p{font-size:.84rem;color:var(--light-muted);line-height:1.65}
 
 /* CONFIANCE - section claire */
-.cf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:48px}
+.cf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
 @media(max-width:700px){.cf-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.cf-grid{grid-template-columns:1fr}}
 .cf{border-left:3px solid var(--blue);background:var(--white);border-radius:0 8px 8px 0;padding:18px 18px}
@@ -612,7 +612,7 @@ body{font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;-webkit-font-
 .im p{font-size:.83rem;color:var(--dark-muted);line-height:1.65}
 
 /* PARTENAIRES - dark */
-.pt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-dark);border:1px solid var(--border-dark);border-radius:10px;overflow:hidden;margin-top:48px}
+.pt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-dark);border:1px solid var(--border-dark);border-radius:10px;overflow:hidden;margin-top:28px}
 @media(max-width:600px){.pt-grid{grid-template-columns:1fr 1fr}}
 .pt{background:var(--navy2);padding:22px 18px;text-align:center}
 .pt h4{font-size:.85rem;font-weight:700;color:var(--white);margin-bottom:3px}
@@ -656,7 +656,7 @@ footer{background:#070E17;padding:48px 5% 26px}
 }
 
 /* METHODE 5 ETAPES */
-.steps5{display:flex;flex-direction:column;gap:2px;background:var(--border-dark);border:1px solid var(--border-dark);border-radius:12px;overflow:hidden;margin-top:48px}
+.steps5{display:flex;flex-direction:column;gap:2px;background:var(--border-dark);border:1px solid var(--border-dark);border-radius:12px;overflow:hidden;margin-top:28px}
 .step5{display:grid;grid-template-columns:56px 1fr;background:var(--navy3)}
 .step5-n{background:var(--gold);color:var(--navy);font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;display:flex;align-items:center;justify-content:center;padding:24px 0}
 .step5-content{padding:24px 28px}
@@ -930,18 +930,6 @@ footer{background:#070E17;padding:48px 5% 26px}
   </div>
 </section>
 
-<!-- POURQUOI NOS PRIX SONT COMPETITIFS -->
-<section class="s-dark3">
-  <div class="inner">
-    <div class="ey">Transparence tarifaire</div>
-    <h2 class="h2">Pourquoi nos prix sont-ils compétitifs&nbsp;?</h2>
-    <div class="prix-block">
-      <p>Notre modèle repose sur un principe simple : nous récupérons les objets, meubles et matériaux qui ont encore de la valeur, et nous les revendons ou les orientons vers des filières de seconde main. Cette revalorisation nous permet de compenser une partie du coût du chantier et de vous proposer un forfait le plus bas possible.</p>
-
-    </div>
-  </div>
-</section>
-
 
 <!-- VIDE MAISON GRATUIT -->
 <section class="s-dark2" id="gratuit">
@@ -951,9 +939,9 @@ footer{background:#070E17;padding:48px 5% 26px}
     <p class="sub">Vous avez des objets de valeur dans le bien&nbsp;? Voici comment ça fonctionne.</p>
     <div style="max-width:720px;margin:36px auto 0;color:var(--dark-mut);font-size:.97rem;line-height:1.8;">
       <p style="margin-bottom:20px;">Avant toute intervention, nous venons visiter le bien gratuitement et sans engagement. Lors de cette visite, nous évaluons l'ensemble du contenu&nbsp;: mobilier ancien, armoires, buffets, tables et chaises de qualité, vaisselle fine, argenterie, bibelots de collection, livres anciens, électroménager, outils, vêtements de luxe ou de marque — tout ce qui a une réelle valeur marchande.</p>
-      <p style="margin-bottom:20px;padding:16px 20px;border-left:3px solid var(--gold);background:rgba(201,150,58,.07);border-radius:0 8px 8px 0;color:rgba(255,255,255,.85);">Soyons honnêtes&nbsp;: tout ne vaut pas de l'argent. Les émissions de télévision donnent parfois une fausse idée de la valeur des objets du quotidien. Mais ce qui a de la valeur, nous le voyons immédiatement — et nous vous en informons clairement lors de la visite.</p>
+      <p style="margin-bottom:20px;">Soyons honnêtes&nbsp;: tout ne vaut pas de l'argent. Les émissions de télévision donnent parfois une fausse idée de la valeur des objets du quotidien. Mais ce qui a de la valeur, nous le voyons immédiatement — et nous vous en informons clairement lors de la visite.</p>
       <p style="margin-bottom:20px;">Cette valeur est ensuite déduite du coût de l'intervention. Dans certains cas, lorsque le bien contient suffisamment d'objets valorisables, l'intervention est entièrement gratuite. <strong style="color:var(--gold)">Dans certains cas, cela peut même vous rapporter de l'argent.</strong></p>
-      <p style="margin-bottom:0;padding:16px 20px;background:rgba(255,255,255,.05);border-radius:8px;"><strong style="color:#fff;">Concrètement&nbsp;:</strong> vous ne payez rien à l'avance. Le devis vous est remis après la visite, il est clair et sans surprise. Le paiement se fait uniquement à la fin du chantier, une fois le bien vidé et nettoyé.</p>
+      <p style="margin-bottom:0;"><strong style="color:#fff;">Concrètement&nbsp;:</strong> vous ne payez rien à l'avance. Le devis vous est remis après la visite, il est clair et sans surprise. Le paiement se fait uniquement à la fin du chantier, une fois le bien vidé et nettoyé.</p>
     </div>
     <div style="text-align:center;margin-top:36px;">
       <a href="tel:+32491508133" style="display:inline-block;background:var(--gold);color:#0D1B2A;font-weight:700;padding:14px 32px;border-radius:8px;text-decoration:none;font-size:1rem;">Demander une estimation gratuite</a>
@@ -1107,36 +1095,9 @@ footer{background:#070E17;padding:48px 5% 26px}
   </div>
 </section>
 
-<!-- DEVIS - SECTION CLAIRE -->
-<section class="s-light" id="devis">
-  <div class="inner">
-    <div class="ey">Pas de mauvaise surprise</div>
-    <h2 class="h2">Devis gratuit &amp; valorisation des biens</h2>
-    <p class="sub">Selon les biens présents, le vide maison peut être gratuit ou fortement réduit. Certains objets ou meubles de valeur peuvent être rachetés directement, ce qui réduit ou annule le coût de l'intervention.</p>
-    <div class="dv-grid">
-      <div class="dv"><div class="dv-bar"></div><h3>Vide maison parfois gratuit</h3><p>Selon les biens présents, le vide maison peut être gratuit ou fortement réduit.</p></div>
-      <div class="dv"><div class="dv-bar"></div><h3>Estimation sur place</h3><p>Nous évaluons gratuitement la situation, le volume et les objets valorisables.</p></div>
-      <div class="dv"><div class="dv-bar"></div><h3>Valorisation des biens</h3><p>Le contenu du logement peut financer tout ou partie du vide maison.</p></div>
-      <div class="dv"><div class="dv-bar"></div><h3>Paiement en fin de chantier</h3><p>Aucun acompte demandé. Vous payez uniquement à la fin de l'intervention.</p></div>
-    </div>
-  </div>
-</section>
 
-<!-- CONFIANCE - SECTION CLAIRE -->
-<section class="s-white">
-  <div class="inner">
-    <div class="ey">Pourquoi nous faire confiance</div>
-    <h2 class="h2">Un service reconnu et encadré</h2>
-    <div class="cf-grid">
-      <div class="cf"><h3>Intervention discrète</h3><p>Respect des lieux, des voisins, des biens et des situations personnelles.</p></div>
-      <div class="cf"><h3>Papiers &amp; documents</h3><p>Gestion attentive des documents importants et des effets personnels.</p></div>
-      <div class="cf"><h3>Approche humaine</h3><p>Service sérieux, sans jugement et adapté aux situations difficiles.</p></div>
-      <div class="cf"><h3>Travail reconnu</h3><p>Interventions régulières pour familles, notaires et administrateurs de biens.</p></div>
-      <div class="cf"><h3>Nettoyage complet</h3><p>Le logement peut être remis propre et prêt pour la suite.</p></div>
-      <div class="cf"><h3>Intervention rapide</h3><p>Organisation rapide selon l'urgence et la situation du chantier.</p></div>
-    </div>
-  </div>
-</section>
+
+
 
 <!-- OBJECTIONS -->
 <section class="s-dark3">
@@ -1146,7 +1107,7 @@ footer{background:#070E17;padding:48px 5% 26px}
         <div class="op">"La maison est trop encombrée."</div>
         <div class="op">"La situation est trop compliquée."</div>
         <div class="op">"C'est après un sinistre, personne ne voudra venir."</div>
-        <div class="op">"Il reste de beaux meubles, vous ne prenez que les débarras."</div>
+        <div class="op">"Il reste de beaux meubles, vous ne prenez que le reste."</div>
         <div class="op">"Personne ne voudra intervenir."</div>
         <div class="op">"Je ne sais pas par où commencer."</div>
       </div>
@@ -1160,18 +1121,6 @@ footer{background:#070E17;padding:48px 5% 26px}
   </div>
 </section>
 
-<!-- IMMOBILIER -->
-<section class="s-dark2">
-  <div class="inner">
-    <div class="ey">Bien prêt pour vente ou location</div>
-    <h2 class="h2">Remise en état avant vente ou location</h2>
-    <div class="immo-grid">
-      <div class="im"><div class="im-n">01</div><h3>Avant vente immobilière</h3><p>Logement vidé et remis en ordre avant passage d'agence ou mise en vente.</p></div>
-      <div class="im"><div class="im-n">02</div><h3>Nettoyage après intervention</h3><p>Nettoyage complet pour laisser un bien propre et présentable.</p></div>
-      <div class="im"><div class="im-n">03</div><h3>Prêt pour reprise</h3><p>Bien prêt pour location, état des lieux ou reprise familiale.</p></div>
-    </div>
-  </div>
-</section>
 
 <!-- PARTENAIRES -->
 <section class="s-dark">
